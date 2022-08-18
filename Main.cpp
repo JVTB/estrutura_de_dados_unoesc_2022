@@ -18,13 +18,14 @@ int main()
 	separador();
 	std::cout << "Qual programa você quer executar? \n";
 	separador();
-
-	std::string opcoes[4] = { "1 - Soma", "2 - Conversor de Graus", "3 - Fatorial", "4 - Potencia"};
-
+	std::string opcoes[4] = { "1 - Soma", "2 - Conversor de Graus", "3 - Subtração", "4 - Potencia"};
 	separador();
 	for (int i = 0; i < 4; i++) {
+
 		std::cout << opcoes[i] << "\n";		
 	}
+	printf("Digite sua opção: ");
+
 	scanf_s("%d", &opcao);
 
 	switch (opcao) {
@@ -33,6 +34,15 @@ int main()
 			std::cout << "Estou iniciando soma \n";
 			soma();
 			break;
-
+		case 2:
+			separador();
+			conversao();
+			break;
+		default:
+			std::cout << "Qualquer coisa que tu queira!!";
+		case 3:
+			separador();
+			subtracao();
+			break;
 	}
 }
